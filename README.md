@@ -4,7 +4,7 @@ Imagine an increasing circle centred on Nelson's column. As that circle increase
 
 The answer seems to be when the circle has a radius of about 14km (or 8.3km if you try to account for couples sharing rooms). Either way, a lot smaller than London's actual commuter zone. Note however that this is a very rough attempt to answer the question!
 
-# Intermediate Calculations
+# Intermediate Measures
 I've used 2011 census data to answer this question. Some intermediate measures were calculated
 ## Bedrooms in Occupied Households ##
 This is obtained by multiplying the number of 1 bedroom households by 1, 2 bedroom households by 2, etc. Unfortunately the final category is '5 and above', so I multiplied this number by 5. The number of bedrooms will therefore be less than in reality.
@@ -20,6 +20,8 @@ Bedrooms occupied by the retired, people looking after their home or family, the
 Frees up bedrooms based on the principle that couples must share a bedroom. This it flawed, because this uses the number of couples currently living in each area - not the number of couples that would live in the area in this thought experiment.
 
 # Plot #
+
+Starting at Nelson's column
 
 ![Plot](plot.png)
 
@@ -37,6 +39,7 @@ The Java takes three command line arguments
 The Python 'plot.py' script takes two arguments and plots the output
 1. The output file
 2. The number of rows to plot  
+
 e.g `python3 plot.py out.csv 10000`
 
 The script will plot whatever columns it finds against the `distance` column.
