@@ -13,22 +13,10 @@ package com.tgelder.jobs2homes.geometry;
  *
  */
 
-public class GreatCircleCalculator {
+public class VincentyDistanceCalculator {
 
   private static double EARTH_CIRC_METERS = 40030218; // Radius = 6371007
   // (GRS80)
-
-  public static double calculateDistance(double lat1, double lon1, double lat2, double lon2) {
-    double radLat1 = Math.toRadians(lat1);
-    double radLon1 = Math.toRadians(lon1);
-    double radLat2 = Math.toRadians(lat2);
-    double radLon2 = Math.toRadians(lon2);
-
-    double d = Math.acos((Math.cos(radLat1) * Math.cos(radLat2))
-                                 + (Math.sin(radLat1) * Math.sin(radLat2)) * (Math.cos(radLon1 - radLon2)));
-    return (d * EARTH_CIRC_METERS);
-
-  }
 
   public static double distVincenty(double lat1, double lon1, double lat2, double lon2) {
     double a = 6378137, b = 6356752.314245, f = 1 / 298.257223563; // WGS-84

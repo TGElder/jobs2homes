@@ -25,7 +25,7 @@ public class App {
     ImmutableMap<String, Integer> workplacePopulation = CSVLoader.load(args[1]);
     log.info("Loading household spaces");
     ImmutableMap<String, Integer> householdSpaces = CSVLoader.load(args[2]);
-    Point startPoint = new Point(Double.parseDouble(args[3]), Double.parseDouble(args[4]));
+    Point startPoint = new Point(Double.parseDouble(args[4]), Double.parseDouble(args[3]));
 
 
     log.info("Creating output areas");
@@ -67,9 +67,6 @@ public class App {
         String line = outputArea.getCode() + "," + distance + "," + jobs + "," + residences;
         log.info(line);
         writer.write(line + "\n");
-        if (residences >= jobs) {
-          return;
-        }
       }
     }
 
